@@ -8,23 +8,25 @@
     tools:context=".MainActivity">
 
 
+    <!--    Top Linear Layout-->
+
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="44dp"
         android:padding="16dp"
         app:columnCount="1"
-        app:rowCount="3"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        >
+        app:rowCount="3"
+        tools:layout_editor_absoluteX="0dp">
 
         <!-- row 1-->
 
         <LinearLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="113dp"
             android:orientation="horizontal"
             android:weightSum="3">
 
@@ -32,19 +34,19 @@
             <Button
                 android:id="@+id/button0"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/teal"
                 android:textColor="#000000"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button1"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/teal"
@@ -54,8 +56,8 @@
             <Button
                 android:id="@+id/button2"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/teal"
@@ -67,15 +69,15 @@
         <LinearLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="113dp"
             android:orientation="horizontal"
             android:weightSum="3">
 
             <Button
                 android:id="@+id/button3"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/teal"
@@ -85,8 +87,8 @@
             <Button
                 android:id="@+id/button4"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/teal"
@@ -96,8 +98,8 @@
             <Button
                 android:id="@+id/button5"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/teal"
@@ -109,15 +111,15 @@
         <LinearLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="113dp"
             android:orientation="horizontal"
             android:weightSum="3">
 
             <Button
                 android:id="@+id/button6"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/teal"
@@ -127,8 +129,8 @@
             <Button
                 android:id="@+id/button7"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/teal"
@@ -138,8 +140,8 @@
             <Button
                 android:id="@+id/button8"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/teal"
@@ -148,8 +150,6 @@
         </LinearLayout>
     </androidx.gridlayout.widget.GridLayout>
 
-
-    <!--    Top Linear Layout-->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -244,7 +244,8 @@
                 android:gravity="center"
                 android:text="@string/player_2"
                 android:textColor="@color/yellow"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -320,7 +321,6 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="@string/app_name"
-        android:textFontWeight="@integer/material_motion_duration_medium_2"
         android:textColor="@color/design_default_color_on_primary"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"

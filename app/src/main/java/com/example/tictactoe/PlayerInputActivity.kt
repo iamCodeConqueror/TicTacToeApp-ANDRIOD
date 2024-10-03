@@ -3,9 +3,7 @@ package com.example.tictactoe
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class PlayerInputActivity : AppCompatActivity() {
@@ -18,21 +16,78 @@ class PlayerInputActivity : AppCompatActivity() {
         val player2NameEditText = findViewById<EditText>(R.id.player2_name)
         val startGameButton = findViewById<Button>(R.id.start_button)
 
+        // Radio buttons for game mode selection
+        val radioVsFriend = findViewById<RadioButton>(R.id.radio_vs_friend)
+        val radioVsComputer = findViewById<RadioButton>(R.id.radio_vs_computer)
+        val gameModeGroup = findViewById<RadioGroup>(R.id.game_mode_group)
+
         // ImageViews for social media icons
         val linkedInImageView = findViewById<ImageView>(R.id.linkedin)
         val instagramImageView = findViewById<ImageView>(R.id.instagram)
         val twitterImageView = findViewById<ImageView>(R.id.twitter)
 
+        // Hide second player's name initially (for vs computer mode)
+        player1NameEditText.visibility = EditText.GONE
+        player2NameEditText.visibility = EditText.GONE
+        startGameButton.visibility = Button.GONE
+
+        // Toggle visibility based on selected game mode
+        gameModeGroup.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+                R.id.radio_vs_friend -> {
+                    player1NameEditText.visibility = EditText.VISIBLE
+                    player2NameEditText.visibility = EditText.VISIBLE
+                    player2NameEditText.hint = getString(R.string.player_2_name)
+                    startGameButton.visibility = Button.VISIBLE
+
+                }
+                R.id.radio_vs_computer -> {
+                    player1NameEditText.visibility = EditText.VISIBLE
+                    player2NameEditText.visibility = EditText.GONE
+                    player2NameEditText.setText("Computer")
+                    startGameButton.visibility = Button.VISIBLE
+
+                }
+            }
+        }
+
         // Start game button listener
         startGameButton.setOnClickListener {
             val player1Name = player1NameEditText.text.toString()
             val player2Name = player2NameEditText.text.toString()
+            val selectedGameModeId = gameModeGroup.checkedRadioButtonId
 
-            // Create an intent to pass player names to MainActivity
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("PLAYER_1_NAME", player1Name)
-            intent.putExtra("PLAYER_2_NAME", player2Name)
-            startActivity(intent)
+            // Check if any game mode is selected
+            if (selectedGameModeId == -1) {
+                Toast.makeText(this, "Please select a game mode", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // Validate input: Ensure player1 name is provided
+            if (player1Name.isEmpty()) {
+                player1NameEditText.error = "Please enter Player 1's name"
+                return@setOnClickListener
+            }
+
+            // If playing with a friend, validate Player 2's name
+            if (radioVsFriend.isChecked && player2Name.isEmpty()) {
+                player2NameEditText.error = "Please enter Player 2's name"
+                return@setOnClickListener
+            }
+
+            // Proceed based on selected game mode
+            if (radioVsComputer.isChecked) {
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("PLAYER_1_NAME", player1Name)
+                intent.putExtra("PLAYER_2_NAME", "Computer")
+                startActivity(intent)
+            } else {
+                // For vs friend mode
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("PLAYER_1_NAME", player1Name)
+                intent.putExtra("PLAYER_2_NAME", player2Name)
+                startActivity(intent)
+            }
         }
 
         // Set click listener for LinkedIn ImageView

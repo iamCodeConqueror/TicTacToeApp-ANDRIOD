@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State when the button is pressed (glow effect) -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#ffffff" />
+            <corners android:radius="10dp" />
+            <stroke android:width="2dp" android:color="#FF4081" />
+            <padding android:left="10dp" android:right="10dp" android:top="5dp" android:bottom="5dp" />
+
+        </shape>
+    </item>
+
+    <!-- Default state (normal button) -->
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="10dp" />
+            <stroke android:width="5dp" android:color="#5ABA2E" />
+        </shape>
+    </item>
+</selector>

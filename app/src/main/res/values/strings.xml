@@ -12,4 +12,7 @@
     <string name="player_1_name">Enter Player 1 Name (X)</string>
     <string name="player_2_name">Enter Player 2 Name (O)</string>
     <string name="developer">Developer</string>
+    <string name="play_with_friend">Vs Friend</string>
+    <string name="play_with_computer">Vs Computer</string>
+
 </resources>
