@@ -62,3 +62,4 @@ Connect with me on:
 - [LinkedIn](https://www.linkedin.com/in/mohit-dwivedi13/)
 - [Instagram](https://www.instagram.com/dmohit13/)
 - [Twitter](https://twitter.com/dmohit013)
+- [Privacy Policy Link](https://sites.google.com/view/privacy-policy-for-simple-tic-/)
