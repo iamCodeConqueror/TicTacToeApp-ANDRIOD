@@ -17,12 +17,10 @@ This is an Android application that lets users play the classic Tic-Tac-Toe game
   <tr>
     <td><img src="/screenshots/main_screen.jpg" alt="Player Input Screen" width="300"/></td>
     <td><img src="/screenshots/vs_friend.jpg" alt="Gameplay Screen" width="300"/></td>
+        <td><img src="/screenshots/vs_computer.jpg" alt="Player Input Screen" width="300"/></td>
   </tr>
   <tr>
-    <td><img src="/screenshots/vs_computer.jpg" alt="Player Input Screen" width="300"/></td>
     <td><img src="/screenshots/game_vs_friend.jpg" alt="Gameplay Screen" width="300"/></td>
-  </tr>
-  <tr>
     <td><img src="/screenshots/game_vs_friendwin.jpg" alt="Game Over Screen" width="300"/></td>
     <td><img src="/screenshots/game_vsCwin.jpg" alt="Score Display" width="300"/></td>
   </tr>
