@@ -12,11 +12,21 @@ This is an Android application that lets users play the classic Tic-Tac-Toe game
 - **Responsive UI**: Buttons and layout adapt to the game state, improving user experience.
 
 ## Screenshots
-| ![Player Input Screen](/screenshots/main_screen.jpg) | ![Gameplay Screen](/screenshot/vs_friend) |
-| -------------------------------------------------------- | ------------------------------------------------- |
-| ![Player Input Screen](/screenshots/vs_computer.jpg) | ![Gameplay Screen](/screenshots/game_vs_friend.jpg) |
-| -------------------------------------------------------- | ------------------------------------------------- |
-| ![Game Over Screen](/screenshots/game_vs_friendwin.jpg)        | ![Score Display](/screenshots/game_vsCwin.jpg)        |
+
+<table>
+  <tr>
+    <td><img src="/screenshots/main_screen.jpg" alt="Player Input Screen" width="300"/></td>
+    <td><img src="/screenshots/vs_friend.jpg" alt="Gameplay Screen" width="300"/></td>
+  </tr>
+  <tr>
+    <td><img src="/screenshots/vs_computer.jpg" alt="Player Input Screen" width="300"/></td>
+    <td><img src="/screenshots/game_vs_friend.jpg" alt="Gameplay Screen" width="300"/></td>
+  </tr>
+  <tr>
+    <td><img src="/screenshots/game_vs_friendwin.jpg" alt="Game Over Screen" width="300"/></td>
+    <td><img src="/screenshots/game_vsCwin.jpg" alt="Score Display" width="300"/></td>
+  </tr>
+</table>
 
 ## How to Play
 1. **Select Game Mode**: Choose to play against the computer or a friend by selecting the appropriate radio button.
